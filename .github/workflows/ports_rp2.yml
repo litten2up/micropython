@@ -21,3 +21,8 @@ jobs:
       run: source tools/ci.sh && ci_rp2_setup
     - name: Build
       run: source tools/ci.sh && ci_rp2_build
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: ports_rp2
+        path: ports/rp2/build-PICO/*
